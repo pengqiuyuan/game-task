@@ -1,7 +1,7 @@
-drop table if exists ss_task;
-drop table if exists ss_user;
+drop table if exists task_task;
+drop table if exists task_user;
 
-create table ss_task (
+create table task_task (
 	id bigint auto_increment,
 	title varchar(128) not null,
 	description varchar(255),
@@ -9,7 +9,7 @@ create table ss_task (
     primary key (id)
 ) engine=InnoDB;
 
-create table ss_user (
+create table task_user (
 	id bigint auto_increment,
 	login_name varchar(64) not null unique,
 	name varchar(64) not null,
