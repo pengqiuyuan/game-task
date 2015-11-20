@@ -55,6 +55,10 @@
 	<!-- JSR303 Validator定义 -->
  	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 	
+	<import resource="classpath:/application_es.xml"/>     
+    <import resource="classpath:/applicationContext-scheduling.xml"/> 
+    <import resource="classpath:/email/applicationContext-email.xml"/>       		
+	
 	<!-- production环境 -->
  	<beans profile="production">
  		<context:property-placeholder ignore-unresolvable="true"
